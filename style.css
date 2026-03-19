@@ -1,9 +1,18 @@
-body{
-    display: grid;
-    place-items: center;
+/*
+    INDEX.HTML (LOGIN)
+*/
+
+.body-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     margin: 0;
     padding: 0;
+    background-image: url(./imagenes/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header{
@@ -26,7 +35,7 @@ header h1{
     color: #003358;
 }
 
-header hr{
+.body-login hr{
     width: 7%;
     border: 1px solid #DD9F09;
 }
@@ -135,6 +144,7 @@ input[type="password"]:focus{
 .olvidar-contraseña{
     display: block;
     text-decoration: none;
+    color: #013D63;
 }
 
 .olvidar-contraseña:hover{
@@ -161,6 +171,54 @@ input[type="submit"]:hover{
 }
 
 
+
+
+/*
+    AGRADECIMIENTOS.HTML
+*/
+
+.body-agr{
+    background-color: #FCF9F8;
+    padding: 0;
+    margin: 0;
+}
+
+.agr{
+    width: 15%;
+    border: 1px solid #DD9F09;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDF7EE;
+    height: 3rem;
+    box-sizing: content-box;
+    border: 1px solid #F5ECE4;
+    font-family: sans-serif;
+    margin-top: 1rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: #445A6A;
+}
+
+nav div{
+    display: grid;
+    place-items: center;
+    height: 3rem;
+    transition: 0.3s;
+}
+
+nav div:hover{
+    border-bottom: 2px solid #ED9D35;
+    transition: 0.3s;
+    
+}
 
 
 
