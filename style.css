@@ -52,6 +52,7 @@ main{
     font-family: sans-serif;
     max-width: 1200px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .incio-sesion-container{
@@ -212,6 +213,7 @@ nav div{
     place-items: center;
     height: 3rem;
     transition: 0.3s;
+    box-sizing: content-box;
 }
 
 nav div:hover{
