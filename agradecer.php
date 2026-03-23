@@ -1,0 +1,64 @@
+<?php 
+
+include "funciones_alumnos.php"; 
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="icon" href="./imagenes/Logo_Jesuitas_España.png" type="image/x-icon">
+
+    <title>AGRADECIMIENTOS</title>
+</head>
+<body class="body-agr">
+    
+    <header>
+        <div>
+            <h1>Agradece <span>en</span> compañía</h1>
+            <hr class="agr">
+        </div>
+    </header>
+    <nav>
+        <div>
+            <a href="./agradecer.html">Agradecer</a>
+        </div>
+        <div>
+            <a href="./recibir.html">Recibir</a>
+        </div>
+        <div>
+            <a href="./index.html">Cerrar sesión</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <form action="#">
+            <div>
+                <select name="jesuitas" id="">
+                    <option value="">-- Selecciona un alumno --</option>
+
+                    <?php
+                    $alumnos=mostrar_alumnos();
+                    while($fila=$alumnos->fetch_array()){
+                            echo '<option value="' . $fila['idAlumno'] . '">' . $fila['nombre'] . ' ' . $fila['apellido'] . '</option>';
+                    }
+                    ?>
+                </select>  
+            </div>
+              
+        </form>
+    </main>
+
+</body>
+</html>

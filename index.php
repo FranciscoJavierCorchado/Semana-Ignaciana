@@ -1,19 +1,65 @@
-<?php
-require_once 'funciones_alumnos.php';
-?>
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Prueba de Alumnos</title>
-</head>
-<body>
-    <h1>Panel de Administración</h1>
-    
-    <?php
-        mostrar_alumnos();
-    ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRADECE | LOGIN</title>
 
+    <!--Vinculamos al archivo .CSS y fuentes de texto e iconos-->
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="icon" href="./imagenes/Logo_Jesuitas_España.png" type="image/x-icon">
+
+</head>
+<body class="body-login">
+    <header>
+        <div>
+            <h1>Agradece <span>en</span> compañía</h1>
+            <hr>
+            <p>Comparte gratitud y fortalece la comunidad</p>
+        </div>
+    </header>
+    <main>
+        <div class="incio-sesion-container">
+            <h2>Inicia sesión para continuar</h2>
+
+            <form action="./login.php" method="post">
+                <hr>
+                <div class="formulario">
+                    <label for="correo">Correo electrónico</label>
+                    <div class="input-icono">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="correo" id="email" placeholder="tu@email.com">
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="formulario">
+                    <label for="pw">Contraseña</label>
+                    <div class="input-icono">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="pw" id="contraseña" placeholder="Ingresa tu contraseña">
+                    </div>
+                </div>
+                
+                <div class="opciones">
+                    <label class="recordar">
+                        <input type="checkbox" name="ck" id="checkbox"> Recordarme
+                    </label>
+                    <a href="#" class="olvidar-contraseña">¿Olvidaste tu contraseña?</a>
+                </div>
+                
+                <input type="submit" value="ENVIAR">
+            </form>
+        </div>
+    </main>
 </body>
 </html>

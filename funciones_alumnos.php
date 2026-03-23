@@ -4,7 +4,7 @@
 define("SERVIDOR", 'localhost');
 define("USUARIO", 'root');
 define("PASSWORD", '');
-define("BBDD", 'cursos');
+define("BBDD", 'agradece_en_compania');
 
 // Función conectar
 function conectar() {
@@ -20,14 +20,8 @@ function mostrar_alumnos() {
     // Consulta SQL para obtener los alumnos
     $sql = "SELECT * FROM alumnos";
     $resultado = $conexion->query($sql);	
-    
-    echo "<h3>Lista de los primeros 3 alumnos:</h3>";
-
-    // Bucle for para mostrar los 3 alumnos
-    for ($i = 0; $i < 3; $i++) {
-        $fila = $resultado->fetch_array();
-    }
-
     $conexion->close();
+    return $resultado;
 }
 ?>
+
